@@ -1,3 +1,17 @@
 ﻿.bg-navbar {
     background-color: #8c8c8c
 }
+
+.breadcrumb {
+    margin-block-end : auto;
+}
+
+.breadcrumb > li {
+    color: lightgray;
+}
+
+.breadcrumb a {
+    color: white;
+    text-decoration: none;
+}
+
