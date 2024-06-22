@@ -28,6 +28,15 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
         outline: none;
     }
 
+.bg-image {
+    background-image: url('../img/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+}
+
 /* #region Blazor Default Styles */
 .valid.modified:not([type=checkbox]) {
     outline: 1px solid #26b050;
