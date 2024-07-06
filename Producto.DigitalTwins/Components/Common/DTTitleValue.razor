@@ -1,0 +1,12 @@
+﻿<div class="dt-titlevalue-container">
+    <div class="dt-title">@Title</div>
+    <div class="dt-value">@Value</div>
+</div>
+
+@code {
+    [Parameter]
+    public string? Title { get; set; }
+    
+    [Parameter]
+    public string? Value { get; set; }
+}

@@ -1,0 +1,14 @@
+﻿.dt-titlevalue-container{
+    min-width: 100px;
+}
+
+.dt-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+.dt-value {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+}

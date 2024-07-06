@@ -7,10 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Components\Common\DTPanel.razor.css" />
+    <None Remove="Components\Common\DTTitleValue.razor.css" />
     <None Remove="Components\Layout\DTNavBar.razor.css" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Components\Common\DTPanel.razor.css" />
+    <Content Include="Components\Common\DTTitleValue.razor.css" />
     <Content Include="Components\Layout\DTNavBar.razor.css">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
     </Content>

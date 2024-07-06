@@ -1,0 +1,8 @@
+﻿<div class="dt-panel p-2">
+    @ChildContent
+</div>
+
+@code {
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+}
