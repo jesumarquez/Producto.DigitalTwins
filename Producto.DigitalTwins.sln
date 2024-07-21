@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Producto.DigitalTwins.Infra
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{9D0806E8-8A5D-4705-80DA-8FC1DEE33E34}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Producto.DigitalTwins.WebApi", "Producto.DigitalTwins.WebApi\Producto.DigitalTwins.WebApi.csproj", "{B5ACAFAA-BB29-408B-AB74-3442E886BFBB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,12 +37,17 @@ Global
 		{1B767994-C990-4FCE-A297-614A7BD77589}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B767994-C990-4FCE-A297-614A7BD77589}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B767994-C990-4FCE-A297-614A7BD77589}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5ACAFAA-BB29-408B-AB74-3442E886BFBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5ACAFAA-BB29-408B-AB74-3442E886BFBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5ACAFAA-BB29-408B-AB74-3442E886BFBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5ACAFAA-BB29-408B-AB74-3442E886BFBB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{12785369-C739-46F4-97BB-A41E01E10D9B} = {9D0806E8-8A5D-4705-80DA-8FC1DEE33E34}
+		{B5ACAFAA-BB29-408B-AB74-3442E886BFBB} = {9D0806E8-8A5D-4705-80DA-8FC1DEE33E34}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E6ACB625-150D-4963-A6B8-D6038C85BF03}
