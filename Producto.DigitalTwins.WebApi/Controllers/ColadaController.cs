@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using ErrorOr;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Producto.DigitalTwins.Application.Services.ColadaService;
 using Producto.DigitalTwins.Contract.Colada;
@@ -6,8 +7,7 @@ using Producto.DigitalTwins.Contract.Colada;
 namespace Producto.DigitalTwins.WebApi.Controllers
 {
     [Route("api/[controller]")]
-    [ApiController]
-    public class ColadaController : ControllerBase
+    public class ColadaController : DigitalTwinsController
     {
         private readonly IColadaService _coladaService;
 
@@ -19,11 +19,16 @@ namespace Producto.DigitalTwins.WebApi.Controllers
         [HttpPost("crear")]
         public IActionResult CrearColada(CrearColadaRequest crearColadaRequest)
         {
-            ColadaCreadaResult result = _coladaService.CrearColada(crearColadaRequest.Numero);
+            ErrorOr<ColadaCreadaResult> result = _coladaService.CrearColada(crearColadaRequest.Numero);
 
-            var response = new ColadaCreadaResponse(result.Id, result.Numero, result.FechaCreacion);
+            return result.Match(
+                coladaCreadaResult => Ok(MapColadaCreadaResult(coladaCreadaResult)),
+                errors => Problem(errors));
+        }
 
-            return Ok(response);
+        private ColadaCreadaResponse MapColadaCreadaResult(ColadaCreadaResult coladaCreadaResult)
+        {
+            return new ColadaCreadaResponse(coladaCreadaResult.Id, coladaCreadaResult.Numero, coladaCreadaResult.FechaCreacion);
         }
     }
 }

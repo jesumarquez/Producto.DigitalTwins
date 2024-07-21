@@ -1,5 +1,7 @@
-﻿using Producto.DigitalTwins.Application.Repositories;
+﻿using ErrorOr;
+using Producto.DigitalTwins.Application.Repositories;
 using Producto.DigitalTwins.Domain.Entities;
+using Producto.DigitalTwins.Domain.Errors;
 
 namespace Producto.DigitalTwins.Application.Services.ColadaService
 {
@@ -12,11 +14,11 @@ namespace Producto.DigitalTwins.Application.Services.ColadaService
             _coladaRepository = coladaRepository;
         }
 
-        public ColadaCreadaResult CrearColada(int numeroColada)
+        public ErrorOr<ColadaCreadaResult> CrearColada(int numeroColada)
         {
             if(_coladaRepository.GetByNumeroColada(numeroColada) is not null)
             {
-                throw new Exception("Existe una colada con el mismo numero.");
+                return Errors.Colada.ColadaDuplicada;
             }
 
             var nuevaColada = new Colada()

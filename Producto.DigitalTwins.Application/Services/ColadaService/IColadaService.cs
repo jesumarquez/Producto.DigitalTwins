@@ -1,7 +1,9 @@
-﻿namespace Producto.DigitalTwins.Application.Services.ColadaService
+﻿using ErrorOr;
+
+namespace Producto.DigitalTwins.Application.Services.ColadaService
 {
     public interface IColadaService
     {
-        ColadaCreadaResult CrearColada(int numeroColada);
+        ErrorOr<ColadaCreadaResult> CrearColada(int numeroColada);
     }
 }
