@@ -1,4 +1,4 @@
-﻿namespace Producto.DigitalTwins.Application.Services.Colada
+﻿namespace Producto.DigitalTwins.Application.Services.ColadaService
 {
     public interface IColadaService
     {

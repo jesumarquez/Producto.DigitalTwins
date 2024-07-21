@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Producto.DigitalTwins.Application.Services.Colada;
+using Producto.DigitalTwins.Application.Services.ColadaService;
 using Producto.DigitalTwins.Contract.Colada;
 
 namespace Producto.DigitalTwins.WebApi.Controllers
