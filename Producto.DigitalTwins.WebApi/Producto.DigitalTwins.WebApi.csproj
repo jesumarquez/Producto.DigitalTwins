@@ -8,11 +8,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Producto.DigitalTwins.Application\Producto.DigitalTwins.Application.csproj" />
+    <ProjectReference Include="..\Producto.DigitalTwins.Contract\Producto.DigitalTwins.Contract.csproj" />
     <ProjectReference Include="..\Producto.DigitalTwins.Infrastructure\Producto.DigitalTwins.Infrastructure.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controllers\" />
   </ItemGroup>
 
 </Project>
