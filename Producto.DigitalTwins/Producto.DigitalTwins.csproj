@@ -21,11 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Producto.DigitalTwins.Application\Producto.DigitalTwins.Application.csproj" />
-    <ProjectReference Include="..\Producto.DigitalTwins.Infrastructure\Producto.DigitalTwins.Infrastructure.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Content Update="C:\Users\jesu\.nuget\packages\bootstrap\5.3.3\contentFiles\any\any\wwwroot\css\bootstrap.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
