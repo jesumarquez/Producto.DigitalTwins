@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Producto.DigitalTwins.Application.Services.ColadaService;
 
 namespace Producto.DigitalTwins.Application
 {
@@ -7,7 +6,9 @@ namespace Producto.DigitalTwins.Application
     {
         public static IServiceCollection AddDigitalTwinsApplication(this IServiceCollection services)
         {
-            services.AddScoped<IColadaService, ColadaService>();
+            services.AddMediatR(cfg => {
+                cfg.RegisterServicesFromAssembly(typeof(DependencyInjections).Assembly);
+            });
 
             return services;
         }

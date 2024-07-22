@@ -1,4 +1,4 @@
-﻿namespace Producto.DigitalTwins.Application.Services.ColadaService
+﻿namespace Producto.DigitalTwins.Application.ColadaCases.Common
 {
     public record ColadaCreadaResult(
         Guid Id,

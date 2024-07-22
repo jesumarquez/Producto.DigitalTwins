@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Producto.DigitalTwins.Application.Repositories;
-using Producto.DigitalTwins.Application.Services.ColadaService;
 using Producto.DigitalTwins.Infrastructure.Repositories;
 
 namespace Producto.DigitalTwins.Infrastructure
