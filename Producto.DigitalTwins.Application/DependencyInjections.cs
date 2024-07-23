@@ -1,4 +1,8 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using FluentValidation;
+using MediatR;
+using Microsoft.Extensions.DependencyInjection;
+using Producto.DigitalTwins.Application.Behaviors;
+using System.Reflection;
 
 namespace Producto.DigitalTwins.Application
 {
@@ -9,6 +13,12 @@ namespace Producto.DigitalTwins.Application
             services.AddMediatR(cfg => {
                 cfg.RegisterServicesFromAssembly(typeof(DependencyInjections).Assembly);
             });
+
+            // MediatR ValidationBehavior
+            services.AddScoped(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
+
+            // FluentValidation
+            services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
             return services;
         }
