@@ -5,17 +5,22 @@ VisualStudioVersion = 17.10.35004.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Producto.DigitalTwins", "Producto.DigitalTwins\Producto.DigitalTwins.csproj", "{12785369-C739-46F4-97BB-A41E01E10D9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Producto.DigitalTwins.Domain", "Producto.DigitalTwins.Domain\Producto.DigitalTwins.Domain.csproj", "{E59F6F4D-54C3-4B9A-BF97-E59FE7135B73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Producto.DigitalTwins.Domain", "Producto.DigitalTwins.Domain\Producto.DigitalTwins.Domain.csproj", "{E59F6F4D-54C3-4B9A-BF97-E59FE7135B73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Producto.DigitalTwins.Application", "Producto.DigitalTwins.Application\Producto.DigitalTwins.Application.csproj", "{7DCAFC1E-03C6-4E2B-B051-275248D9A0A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Producto.DigitalTwins.Application", "Producto.DigitalTwins.Application\Producto.DigitalTwins.Application.csproj", "{7DCAFC1E-03C6-4E2B-B051-275248D9A0A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Producto.DigitalTwins.Infrastructure", "Producto.DigitalTwins.Infrastructure\Producto.DigitalTwins.Infrastructure.csproj", "{1B767994-C990-4FCE-A297-614A7BD77589}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Producto.DigitalTwins.Infrastructure", "Producto.DigitalTwins.Infrastructure\Producto.DigitalTwins.Infrastructure.csproj", "{1B767994-C990-4FCE-A297-614A7BD77589}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{9D0806E8-8A5D-4705-80DA-8FC1DEE33E34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Producto.DigitalTwins.WebApi", "Producto.DigitalTwins.WebApi\Producto.DigitalTwins.WebApi.csproj", "{B5ACAFAA-BB29-408B-AB74-3442E886BFBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Producto.DigitalTwins.WebApi", "Producto.DigitalTwins.WebApi\Producto.DigitalTwins.WebApi.csproj", "{B5ACAFAA-BB29-408B-AB74-3442E886BFBB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Producto.DigitalTwins.Contract", "Producto.DigitalTwins.Contract\Producto.DigitalTwins.Contract.csproj", "{6F3F4FC8-6EBE-4786-9AA6-F9076CF20E57}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Producto.DigitalTwins.Contract", "Producto.DigitalTwins.Contract\Producto.DigitalTwins.Contract.csproj", "{6F3F4FC8-6EBE-4786-9AA6-F9076CF20E57}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{24EDB9F0-E983-496E-AF6E-B85BD86C2D67}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
