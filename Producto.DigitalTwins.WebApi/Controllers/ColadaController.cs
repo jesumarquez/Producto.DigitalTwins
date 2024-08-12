@@ -34,5 +34,11 @@ namespace Producto.DigitalTwins.WebApi.Controllers
         {
             return new ColadaCreadaResponse(coladaCreadaResult.Id, coladaCreadaResult.Numero, coladaCreadaResult.FechaCreacion);
         }
+
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            return Ok("hello");
+        }
     }
 }
