@@ -1,0 +1,21 @@
+version: "3.9"
+
+services:
+  webapi:
+    image: producto.digitaltwins.webapi:1.0  
+    container_name: digitaltwins-webapi
+    build:
+        context: .
+        dockerfile: ./Producto.DigitalTwins.WebApi/Dockerfile
+    ports:
+        - "8090:8090"
+        - "8091:8091"
+    volumes:
+        - ${APPDATA}\microsoft\UserSecrets\:/root/.microsoft/usersecrets
+        - ${USERPROFILE}\.aspnet\https:/root/.aspnet/https/
+    environment:
+        - ASPNETCORE_ENVIRONMENT=Development
+        - ASPNETCORE_URLS=http://+:8090;https://+:8091
+        - ASPNETCORE_HTTPS_PORTS=8091
+        - ASPNETCORE_Kestrel__Certificates__Default__Password=<PASSWORD>
+        - ASPNETCORE_Kestrel__Certificates__Default__Path=/root/.aspnet/https/producto.digitaltwins.webapi.pfx 
