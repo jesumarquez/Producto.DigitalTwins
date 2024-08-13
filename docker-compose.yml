@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
   webapi:
     image: producto.digitaltwins.webapi:1.0  
@@ -17,5 +15,3 @@ services:
         - ASPNETCORE_ENVIRONMENT=Development
         - ASPNETCORE_URLS=http://+:8090;https://+:8091
         - ASPNETCORE_HTTPS_PORTS=8091
-        - ASPNETCORE_Kestrel__Certificates__Default__Password=<PASSWORD>
-        - ASPNETCORE_Kestrel__Certificates__Default__Path=/root/.aspnet/https/producto.digitaltwins.webapi.pfx 
