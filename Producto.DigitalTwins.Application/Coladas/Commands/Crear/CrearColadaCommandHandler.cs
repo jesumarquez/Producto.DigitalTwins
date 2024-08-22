@@ -1,16 +1,11 @@
 ﻿using ErrorOr;
 using MediatR;
-using Producto.DigitalTwins.Application.ColadaCases.Common;
+using Producto.DigitalTwins.Application.Coladas.Common;
 using Producto.DigitalTwins.Application.Repositories;
 using Producto.DigitalTwins.Domain.Entities;
 using Producto.DigitalTwins.Domain.Errors;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Producto.DigitalTwins.Application.ColadaCases.Commands.Crear
+namespace Producto.DigitalTwins.Application.Coladas.Commands.Crear
 {
     public class CrearColadaCommandHandler : IRequestHandler<CrearColadaCommand, ErrorOr<ColadaCreadaResult>>
     {

@@ -1,9 +1,8 @@
 ﻿using ErrorOr;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Producto.DigitalTwins.Application.ColadaCases.Commands.Crear;
-using Producto.DigitalTwins.Application.ColadaCases.Common;
+using Producto.DigitalTwins.Application.Coladas.Commands.Crear;
+using Producto.DigitalTwins.Application.Coladas.Common;
 using Producto.DigitalTwins.Contract.Colada;
 
 namespace Producto.DigitalTwins.WebApi.Controllers

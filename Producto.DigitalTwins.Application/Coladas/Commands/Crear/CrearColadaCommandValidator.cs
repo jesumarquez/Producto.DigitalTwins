@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace Producto.DigitalTwins.Application.ColadaCases.Commands.Crear
+namespace Producto.DigitalTwins.Application.Coladas.Commands.Crear
 {
     public class CrearColadaCommandValidator : AbstractValidator<CrearColadaCommand>
     {

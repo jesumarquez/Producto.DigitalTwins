@@ -10,7 +10,8 @@ namespace Producto.DigitalTwins.Application
     {
         public static IServiceCollection AddDigitalTwinsApplication(this IServiceCollection services)
         {
-            services.AddMediatR(cfg => {
+            services.AddMediatR(cfg =>
+            {
                 cfg.RegisterServicesFromAssembly(typeof(DependencyInjections).Assembly);
             });
 

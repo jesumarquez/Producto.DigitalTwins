@@ -1,13 +1,6 @@
 ﻿using ErrorOr;
 using FluentValidation;
 using MediatR;
-using Producto.DigitalTwins.Application.ColadaCases.Commands.Crear;
-using Producto.DigitalTwins.Application.ColadaCases.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Producto.DigitalTwins.Application.Behaviors
 {
@@ -26,14 +19,14 @@ namespace Producto.DigitalTwins.Application.Behaviors
             RequestHandlerDelegate<TResponse> next,
             CancellationToken cancellationToken)
         {
-            if(_validator is null)
+            if (_validator is null)
             {
                 return await next();
             }
 
             var validationResult = await _validator.ValidateAsync(request, cancellationToken);
 
-            if (validationResult.IsValid) 
+            if (validationResult.IsValid)
             {
                 return await next();
             }
