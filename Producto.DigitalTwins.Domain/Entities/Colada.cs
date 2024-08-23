@@ -2,7 +2,7 @@
 
 namespace Producto.DigitalTwins.Domain.Entities
 {
-    public sealed class Colada : Entity
+    public sealed class Colada : AggregateRoot
     {
         internal Colada(Guid id, int numero) : base(id)
         {
