@@ -23,10 +23,7 @@ namespace Producto.DigitalTwins.Application.Coladas.Commands.Crear
                 return Errors.Colada.ColadaDuplicada;
             }
 
-            var nuevaColada = new Colada()
-            {
-                Numero = request.Numero
-            };
+            var nuevaColada = Colada.CrearColada(request.Numero);
 
             _coladaRepository.Add(nuevaColada);
 

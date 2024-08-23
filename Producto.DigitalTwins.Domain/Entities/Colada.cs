@@ -1,9 +1,24 @@
-﻿namespace Producto.DigitalTwins.Domain.Entities
+﻿using Producto.DigitalTwins.Domain.Primivites;
+
+namespace Producto.DigitalTwins.Domain.Entities
 {
-    public class Colada
+    public sealed class Colada : Entity
     {
-        public Guid Id { get; } = Guid.NewGuid();
-        public int Numero { get; init; }
-        public DateTime FechaCreacion { get; } = DateTime.UtcNow;
+        internal Colada(Guid id, int numero) : base(id)
+        {
+            Numero = numero;
+            FechaCreacion = DateTime.UtcNow;
+        }
+
+        public int Numero { get; private set; }
+
+        public DateTime FechaCreacion { get; private set; }
+
+        public static Colada CrearColada(int numero)
+        {
+            var colada = new Colada(Guid.NewGuid(), numero);
+
+            return colada;
+        }
     }
 }
