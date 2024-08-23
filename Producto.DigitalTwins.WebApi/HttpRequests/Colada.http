@@ -6,7 +6,7 @@ POST {{host}}/api/colada/crear
 Content-Type: application/json
 
 {
-  "numero": 11345
+  "numero": 1345
 }
 
 ###

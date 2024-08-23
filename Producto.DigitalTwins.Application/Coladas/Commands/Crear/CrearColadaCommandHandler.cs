@@ -4,6 +4,7 @@ using Producto.DigitalTwins.Application.Coladas.Common;
 using Producto.DigitalTwins.Application.Repositories;
 using Producto.DigitalTwins.Domain.Entities;
 using Producto.DigitalTwins.Domain.Errors;
+using Producto.DigitalTwins.Domain.ValueObjects;
 
 namespace Producto.DigitalTwins.Application.Coladas.Commands.Crear
 {
@@ -18,6 +19,13 @@ namespace Producto.DigitalTwins.Application.Coladas.Commands.Crear
 
         public async Task<ErrorOr<ColadaCreadaResult>> Handle(CrearColadaCommand request, CancellationToken cancellationToken)
         {
+            var numeroColadaResult = NumeroColada.Crear(request.Numero);
+
+            if(numeroColadaResult.IsError)
+            {
+                return Errors.Colada.NumeroColadaInvalido;
+            }
+
             if (_coladaRepository.GetByNumeroColada(request.Numero) is not null)
             {
                 return Errors.Colada.ColadaDuplicada;
