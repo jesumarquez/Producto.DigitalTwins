@@ -12,6 +12,11 @@ namespace Producto.DigitalTwins.Infrastructure.Repositories
             _coladaList.Add(colada);
         }
 
+        public Colada? GetById(Guid coladaId)
+        {
+            return _coladaList.Where(c => c.Id == coladaId).FirstOrDefault();
+        }
+
         public Colada? GetByNumeroColada(int numeroColada)
         {
             return _coladaList.SingleOrDefault(c => c.Numero == numeroColada);

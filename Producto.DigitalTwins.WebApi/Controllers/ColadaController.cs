@@ -3,6 +3,7 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Producto.DigitalTwins.Application.Coladas.Commands.Crear;
 using Producto.DigitalTwins.Application.Coladas.Common;
+using Producto.DigitalTwins.Application.Coladas.Queries.GetById;
 using Producto.DigitalTwins.Contract.Colada;
 
 namespace Producto.DigitalTwins.WebApi.Controllers
@@ -38,6 +39,18 @@ namespace Producto.DigitalTwins.WebApi.Controllers
         public IActionResult GetAll()
         {
             return Ok("hello");
+        }
+
+        [HttpGet("{coladaId:guid}")]
+        public async Task<IActionResult> ObtenerColadaById(Guid coladaId)
+        {
+            var query = new ObtenerColadaByIdQuery(coladaId);
+
+            ErrorOr<ObtenerColadaResult> result = await _mediator.Send(query);
+
+            return result.Match(
+                obtenerColadaByIdResult => Ok(obtenerColadaByIdResult),
+                errors => Problem(errors));
         }
     }
 }

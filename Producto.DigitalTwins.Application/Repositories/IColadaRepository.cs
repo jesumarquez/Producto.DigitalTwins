@@ -6,5 +6,6 @@ namespace Producto.DigitalTwins.Application.Repositories
     {
         Colada? GetByNumeroColada(int numeroColada);
         void Add(Colada colada);
+        Colada? GetById(Guid coladaId);
     }
 }

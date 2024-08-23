@@ -1,8 +1,14 @@
-@host=https://localhost:8081
+@host=https://localhost:7090
+
+@coladaId=59c92041-e1dd-4b46-8828-7ecae8e9e04a
 
 POST {{host}}/api/colada/crear
 Content-Type: application/json
 
 {
-  "numero": 12345
+  "numero": 11345
 }
+
+###
+
+GET {{host}}/api/colada/{{coladaId}}
