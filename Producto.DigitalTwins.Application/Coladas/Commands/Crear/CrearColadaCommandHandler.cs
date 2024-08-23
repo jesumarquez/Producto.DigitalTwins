@@ -11,10 +11,12 @@ namespace Producto.DigitalTwins.Application.Coladas.Commands.Crear
     public class CrearColadaCommandHandler : IRequestHandler<CrearColadaCommand, ErrorOr<ColadaCreadaResult>>
     {
         private readonly IColadaRepository _coladaRepository;
+        private readonly IMediator _mediator;
 
-        public CrearColadaCommandHandler(IColadaRepository coladaRepository)
+        public CrearColadaCommandHandler(IColadaRepository coladaRepository, IMediator mediator)
         {
             _coladaRepository = coladaRepository;
+            _mediator = mediator;
         }
 
         public async Task<ErrorOr<ColadaCreadaResult>> Handle(CrearColadaCommand request, CancellationToken cancellationToken)
@@ -34,6 +36,12 @@ namespace Producto.DigitalTwins.Application.Coladas.Commands.Crear
             var nuevaColada = Colada.CrearColada(request.Numero);
 
             _coladaRepository.Add(nuevaColada);
+
+            //TODO: tal vez sea mejor hacer esto en el repositorio
+            foreach (var domainEvent in nuevaColada.DomainEvents)
+            {
+                await _mediator.Publish(domainEvent);
+            }
 
             return new ColadaCreadaResult(nuevaColada.Id, nuevaColada.Numero, nuevaColada.FechaCreacion);
         }
