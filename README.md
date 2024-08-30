@@ -31,3 +31,10 @@ dotnet user-secrets -p producto.digitaltwins.webapi\producto.digitaltwins.webapi
 ```powershell
 docker run --rm -it -p 8090:8090 -p 8091:8091 -v $env:APPDATA\microsoft\UserSecrets\:/root/.microsoft/usersecrets -v $env:USERPROFILE\.aspnet\https:/root/.aspnet/https/ -e  ASPNETCORE_URLS="https://+:8091;http://+:8090" -e ASPNETCORE_HTTPS_PORTS=8091 -e ASPNETCORE_ENVIRONMENT=Development -e ASPNETCORE_Kestrel__Certificates__Default__Password="<PASSWORD>" -e ASPNETCORE_Kestrel__Certificates__Default__Path=/root/.aspnet/https/producto.digitaltwins.webapi.pfx --name digitaltwins-webapi producto.digitaltwins.webapi:1.0
 ```
+
+### Compose
+
+```powershell
+docker compose up
+docker compose down
+```
