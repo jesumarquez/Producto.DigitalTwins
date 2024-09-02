@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Producto.DigitalTwins.Common\Producto.DigitalTwins.Common.csproj" />
+    <ProjectReference Include="..\Producto.DigitalTwins.Domain\Producto.DigitalTwins.Domain.csproj" />
+    <ProjectReference Include="..\Producto.DigitalTwins.ModeloDanielli\Producto.DigitalTwins.ModeloDanielli.csproj" />
+  </ItemGroup>
+
+</Project>

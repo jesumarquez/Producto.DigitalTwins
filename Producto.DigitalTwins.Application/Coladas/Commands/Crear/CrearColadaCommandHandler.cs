@@ -23,7 +23,7 @@ namespace Producto.DigitalTwins.Application.Coladas.Commands.Crear
         {
             var numeroColadaResult = NumeroColada.Crear(request.Numero);
 
-            if(numeroColadaResult.IsError)
+            if (numeroColadaResult.IsError)
             {
                 return Errors.Colada.NumeroColadaInvalido;
             }

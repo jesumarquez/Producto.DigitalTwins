@@ -7,7 +7,7 @@ namespace Producto.DigitalTwins.Domain.Primivites
         private readonly List<IDomainEvent> _domainEvents = new();
 
         public ReadOnlyCollection<IDomainEvent> DomainEvents => _domainEvents.AsReadOnly();
-        
+
         protected AggregateRoot(Guid id) : base(id)
         {
         }

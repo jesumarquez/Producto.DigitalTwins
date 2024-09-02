@@ -1,6 +1,5 @@
 ﻿using Producto.DigitalTwins.Domain.DomainEvents;
 using Producto.DigitalTwins.Domain.Primivites;
-using System.ComponentModel;
 
 namespace Producto.DigitalTwins.Domain.Entities
 {
@@ -21,7 +20,7 @@ namespace Producto.DigitalTwins.Domain.Entities
         public static Colada CrearColada(int numero)
         {
             var colada = new Colada(Guid.NewGuid(), numero);
-            
+
             return colada;
         }
     }

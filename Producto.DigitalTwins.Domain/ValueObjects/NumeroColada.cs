@@ -1,11 +1,5 @@
 ﻿using ErrorOr;
-using Producto.DigitalTwins.Domain.Errors;
 using Producto.DigitalTwins.Domain.Primivites;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Producto.DigitalTwins.Domain.ValueObjects
 {
@@ -15,14 +9,14 @@ namespace Producto.DigitalTwins.Domain.ValueObjects
 
         public int Value { get; }
 
-        private NumeroColada(int numero) 
+        private NumeroColada(int numero)
         {
             Value = numero;
         }
 
         public static ErrorOr<NumeroColada> Crear(int numero)
         {
-            if(numero < MIN_NUMERO_COLDA)
+            if (numero < MIN_NUMERO_COLDA)
             {
                 return Error.Validation(code: "NumeroColada.Invalido", description: "Numero de colada invalido.");
             }

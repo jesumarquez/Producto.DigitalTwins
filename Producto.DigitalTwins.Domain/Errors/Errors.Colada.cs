@@ -10,7 +10,7 @@ namespace Producto.DigitalTwins.Domain.Errors
                 Error.Conflict(code: "Colada.NumeroDuplicado",
                     description: "Existe una colada con el mismo número.");
 
-            public static Error NotFound => 
+            public static Error NotFound =>
                 Error.NotFound(code: "Colada.NotFound",
                     description: "La colada no existe.");
 
